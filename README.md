@@ -1,19 +1,20 @@
+# Arduino Servo Face Tracker
 A real-time face tracking system that uses computer vision and machine learning to detect head movements and controls Arduino servos for pan/tilt motion tracking.
 
 ![Face Tracking Demo](assets/opencv-demo-screenshot.png)
 
-# Overview 
+## Overview 
 
 This project combines Python-based computer vision with Arduino hardware control to create a responsive face tracking system. The system detects facial landmarks using MediaPipe, calculates head pose orientation, and sends control signals to servos that physically follow your movements.
 
-# Features 
+## Features 
 
 - **Real-time Tracking:** Low-latency head-pose detection using OpenCV (Camera input) and Mediapipe
 - **Dead Zone Logic**: Prevent unnecessary servo movements within threshold ranges
 - **Optimized Data Transfer**: 115200 baud serial connection and integer data sending for minimal response delay
 - **Visual Feedback**: Live video feed with angle measurements and FPS counter
 
-# Hardware Requirements
+## Hardware Requirements
 
 ![Wiring Diagram](assets/circuit.png)
 
@@ -28,7 +29,7 @@ This project combines Python-based computer vision with Arduino hardware control
 | Pan/tilt bracket (optional)                                 | 1    |
 | Jumper cable for servo connection (depends on your circuit) | -    |
 
-## Wiring
+### Wiring
 
 | Servo   | Function      | Arduino Pin |
 | ------- | ------------- | ----------- |
@@ -42,7 +43,7 @@ Each servo also requires:
 > *Note:* You can do with Arduino 5V pin and Arduino GND pin, but it's not recommended, because it's unstable and unsafe for Arduino's voltage regulator. 
 > (It can causes your Arduino reset and worst case: it can harm your Arduino)
 
-# Installation
+## Installation
 
 1. Clone the Repository
 
@@ -98,7 +99,7 @@ Check available ports:
 ls /dev/cu.*
 ```
 
-# Usage
+## Usage
 
 1. Ensure your Arduino is connected via USB (Including the servos)
 2. Run the Python script:
