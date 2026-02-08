@@ -48,7 +48,7 @@ Each servo also requires:
 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/isy-xyz/headpose-estservo.git
 cd arduino-face-tracker
 ```
 
