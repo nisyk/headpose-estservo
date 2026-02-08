@@ -34,3 +34,77 @@ This project combines Python-based computer vision with Arduino hardware control
 | ------- | ------------- | ----------- |
 | Servo 1 | Tilt (Y-axis) | Pin D6      |
 | Servo 2 | Pan (X-axis)  | Pin D9      |
+
+Each servo also requires:
+- 5 V -> 5V power supply  
+- GND -> Common ground (the point where the Arduino GND pin and the negative power supply are connected).
+
+> *Note:* You can do with Arduino 5V pin and Arduino GND pin, but it's not recommended, because it's unstable and unsafe for Arduino's voltage regulator. 
+> (It can causes your Arduino reset and worst case: it can harm your Arduino)
+
+# Installation
+
+1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd arduino-face-tracker
+```
+
+2. Install Python Dependencies
+
+*System Requriements:* Python 3.8-3.10 (3.10 recommended)
+
+```bash
+pip install -r requirements.txt
+```
+
+**Required libraries:**
+- `opencv-python`
+- `mediapipe`
+- `pyserial`
+- `numpy
+- `protobuf`
+
+3. Upload Arduino Code
+
+	1. Open `arduino_code.ino` in Arduino IDE
+	2. Select your board type and port
+	3. Click Upload
+
+4. Configure Serial Port
+Edit the serial port in `main.py` 
+**Linux:** 
+```python 
+arduino = serial.Serial(port='/dev/ttyUSB0', baudrate=115200, timeout=0.1)
+```
+Check available ports:
+```bash
+ls /dev/ttyUSB* /dev/ttyACM*
+```
+
+**Windows:**
+```python
+arduino = serial.Serial(port=Check available ports:'COM3', baudrate=115200, timeout=0.1)
+```
+Check Device Manager -> Ports (COM)
+
+**macOS**
+```python
+arduino = serial.Serial(port='/dev/cu.usbmodem14201', baudrate=115200, timeout=0.1)
+```
+Check available ports:
+```bash
+ls /dev/cu.*
+```
+
+# Usage
+
+1. Ensure your Arduino is connected via USB (Including the servos)
+2. Run the Python script:
+```bash
+python main.py
+```
+3. Position yourself in front of the webacm
+4. The servo should track your head movements
+5. Press **'q'** to quit
