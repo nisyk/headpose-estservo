@@ -64,7 +64,7 @@ pip install -r requirements.txt
 - `opencv-python`
 - `mediapipe`
 - `pyserial`
-- `numpy
+- `numpy`
 - `protobuf`
 
 3. Upload Arduino Code
@@ -75,6 +75,7 @@ pip install -r requirements.txt
 
 4. Configure Serial Port
 Edit the serial port in `main.py` 
+
 **Linux:** 
 ```python 
 arduino = serial.Serial(port='/dev/ttyUSB0', baudrate=115200, timeout=0.1)
