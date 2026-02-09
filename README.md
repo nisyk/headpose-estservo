@@ -4,18 +4,18 @@ A real-time face pose estimation tracking system that uses computer vision and m
 
 ![Face Tracking Demo](assets/opencv-demo-screenshot.png)
 
-# Overview 
+## Overview 
 
 This project combines Python-based computer vision with Arduino hardware control to create a responsive face tracking system. The system detects facial landmarks using MediaPipe, calculates head pose orientation, and sends control signals to servos that physically follow your movements.
 
-# Features 
+## Features 
 
 - **Real-time Tracking:** Low-latency head-pose detection using OpenCV (Camera input) and Mediapipe
 - **Dead Zone Logic**: Prevent unnecessary servo movements within threshold ranges
 - **Optimized Data Transfer**: 115200 baud serial connection and integer data sending for minimal response delay
 - **Visual Feedback**: Live video feed with angle measurements and FPS counter
 
-# Hardware Requirements
+## Hardware Requirements
 
 ![Wiring Diagram](assets/circuit.png)
 
@@ -29,8 +29,8 @@ This project combines Python-based computer vision with Arduino hardware control
 | External 5V power supply (reccomended)                      | 1    |
 | Pan/tilt bracket (optional)                                 | 1    |
 | Jumper cable for servo connection (depends on your circuit) | -    |
-## Wiring
 
+### Wiring
 
 | Servo   | Function      | Signal Pin (Yellow) | Power Pin (Red) | GND Pin (Chocolate) |
 | ------- | ------------- | ------------------- | --------------- | ------------------- |
@@ -44,7 +44,7 @@ Each servo also requires:
 > *Note:* You can do with Arduino 5V pin and Arduino GND pin, but it's not recommended, because it's unstable and unsafe for Arduino's voltage regulator. 
 > (It can causes your Arduino reset and worst case: it can harm your Arduino)
 
-# Installation
+## Installation
 
 1. Clone the Repository
 
@@ -74,7 +74,7 @@ pip install -r requirements.txt
   2. Select your board type and port
   3. Click Upload
 
-### Check Serial Port
+#### Check Serial Port
 Edit the serial port in `main.py` 
 
 **Linux:** 
