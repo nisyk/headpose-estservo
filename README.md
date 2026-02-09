@@ -42,14 +42,14 @@ Each servo also requires:
 - GND: Common ground (the point where the Arduino GND pin and the negative power supply are connected).
 
 > *Note:* You can do with Arduino 5V pin and Arduino GND pin, but it's not recommended, because it's unstable and unsafe for Arduino's voltage regulator. 
-> (It can causes your Arduino reset and worst case: it can harm your Arduino)
+> (It can causes your Arduino reset and worst case: it can harm your Arduino directly)
 
 ## Installation
 
 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/isy-xyz/headpose-estservo.git
 cd arduino-face-tracker
 ```
 
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 - `opencv-python`
 - `mediapipe`
 - `pyserial`
-- `numpy
+- `numpy`
 - `protobuf`
 
 3. Upload Arduino Code
@@ -108,7 +108,7 @@ ls /dev/cu.*
 ```bash
 python main.py
 ```
-3. Position yourself in front of the webacm
+3. Position yourself in front of the webcam
 4. The servo should track your head movements
 5. Press **'q'** to quit
 
@@ -183,4 +183,4 @@ sudo usermod -aG dialout $USER
 - Position face clearly in frame
 
 ---
-Made by 🌆 **ISY-XYZ**
+Made by curious with 🌆 **ISY-XYZ**
