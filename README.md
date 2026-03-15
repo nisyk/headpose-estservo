@@ -183,4 +183,4 @@ sudo usermod -aG dialout $USER
 - Position face clearly in frame
 
 ---
-Made by curious with 🌆 **ISY-XYZ**
+Made with curious by 🌆 **NISY**
