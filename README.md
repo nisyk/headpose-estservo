@@ -15,8 +15,8 @@ This project combines Python-based computer vision with Arduino hardware control
 
 - **Real-time Tracking:** Low-latency head-pose detection using OpenCV (Camera input) and Mediapipe
 - **Dead Zone Logic**: Prevent unnecessary servo movements within threshold ranges
-- **Optimized Data Transfer**: 115200 baud serial connection and integer data sending for minimal response delay
-- **Visual Feedback**: Live video feed with angle measurements and FPS counter
+- **Optimized Data Transfer**: 115200 baud serial connection and integer data sending for minimal response delay.
+- **Visual Feedback**: Live video feed with angle measurements and FPS counter.
 
 ## Hardware Requirements
 
@@ -52,8 +52,8 @@ Each servo also requires:
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/isy-xyz/headpose-estservo.git
-cd arduino-face-tracker
+git clone https://github.com/nisyk/headpose-estservo.git
+cd headpose-estservo
 ```
 
 2. Install Python Dependencies
@@ -71,11 +71,9 @@ pip install -r requirements.txt
 - `numpy`
 - `protobuf`
 
-3. Upload Arduino Code
-
-  1. Open `arduino_code.ino` in Arduino IDE
-  2. Select your board type and port
-  3. Click Upload
+3. Open `arduino_code.ino` in Arduino IDE
+4. Select your board type and port
+5. Click Upload ➡️
 
 #### Check Serial Port
 Edit the serial port in `main.py` 
@@ -163,12 +161,16 @@ if (valX > 20) {        // Adjust this value
 
 - Check USB connection
 - Verify wiring connections (MCU reset)
-- Check correct in port in `main.py` ([Check Your Serial Port](#check%20serial%20port))
+- [Check your Serial Port](#check%20serial%20port)
 - Try a different USB cable
 - Check permission on Linux 
 ```bash
 sudo usermod -aG dialout $USER
 ```
+
+**Webcam not working**
+- Change camera index in `main.py`: `cap = cv2.VideoCapture(1)`
+- Check camera permissions
 
 #### Servos Not Moving
 
