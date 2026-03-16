@@ -1,5 +1,7 @@
 # Arduino Servo Head Pose Estimation
 
+**Caution**: This project is designed for educational and hobbyist purposes. Ensure proper safety measures when working with electronics.
+
 A real-time face pose estimation tracking system that uses computer vision and machine learning to detect head movements and controls Arduino servos for pan/tilt motion tracking.
 
 ![Face Tracking Demo](assets/opencv-demo-screenshot.png)
